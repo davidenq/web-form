@@ -4,22 +4,22 @@
 [![Downloads](https://img.shields.io/npm/dm/web-form.svg?style=flat-square)](http://npm-stat.com/charts.html?package=web-form)
 [![Bower](https://img.shields.io/bower/v/web-form.svg?maxAge=2592000?style=flat-square)]()
 
-web-form is a custom web form as a [riot-based](http://riotjs.com/) webcomponent, semantic-ui framework for design and fetch polyfill for web request and handle response thatn using an XMLHttpRequest. Please see all examples for more information.
+web-form is a custom web form as a [riot-based](http://riotjs.com/) webcomponent, semantic-ui framework for design and fetch polyfill for web request and handle response. Please see all examples for more information.
 
 This webcomponent can be used to validate information using ajax. For example, when it register new user, can verify if username or email already it was registered.
 
 ## Try online
 
-[single input]()
-[horizontal inputs]()
-[vertical inputs]()
-[mixed inputs]()
+- [single input](http://embed.plnkr.co/LlqBpI)
+- [horizontal inputs](http://embed.plnkr.co/TeBVqP/)
+- [vertical inputs](http://embed.plnkr.co/wkQhSD/)
+- [mixed inputs](http://embed.plnkr.co/6A4Dqm)
 
-## Why [semantic-ui](semantic-ui.com) framework instead of boostrap or another css framework?
+### Why [semantic-ui](semantic-ui.com) framework instead of boostrap or another css framework?
 
 Because semantic-ui allows load only the components that you need via cnd. For example, web-form uses only form.min.css.
 
-## Why [fetch polyfill](https://github.com/github/fetch) instead of jquery library?
+### Why [fetch polyfill](https://github.com/github/fetch) instead of jquery library?
 
 Because jquery is a library with many features. web-form needs a library that work only with ajax, no more features.
 
