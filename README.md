@@ -1,28 +1,32 @@
 # web-form
 
+[![NPM](https://img.shields.io/npm/v/web-form.svg?style=flat-square)](https://www.npmjs.com/package/web-form)
+[![Downloads](https://img.shields.io/npm/dm/web-form.svg?style=flat-square)](http://npm-stat.com/charts.html?package=web-form)
+[![Bower](https://img.shields.io/bower/v/web-form.svg?maxAge=2592000?style=flat-square)]()
+
 web-form is a custom web form as a [riot-based](http://riotjs.com/) webcomponent, semantic-ui framework for design and fetch polyfill for web request and handle response thatn using an XMLHttpRequest. Please see all examples for more information.
 
-This webcomponent can be used to validate information. For example, when it register new user can be verify if username or email already registered.
+This webcomponent can be used to validate information using ajax. For example, when it register new user, can verify if username or email already it was registered.
 
-# Try online
+## Try online
 
 [single input]()
 [horizontal inputs]()
 [vertical inputs]()
 [mixed inputs]()
 
-# Why [semantic-ui](semantic-ui.com) framework instead of boostrap or another css framework?
+## Why [semantic-ui](semantic-ui.com) framework instead of boostrap or another css framework?
 
 Because semantic-ui allows load only the components that you need via cnd. For example, web-form uses only form.min.css.
 
-# Why [fetch polyfill](https://github.com/github/fetch) instead of jquery library?
+## Why [fetch polyfill](https://github.com/github/fetch) instead of jquery library?
 
 Because jquery is a library with many features. web-form needs a library that work only with ajax, no more features.
 
-# Install
+## Install
 
 ```bash 
-bashbower install web-form --save
+bower install web-form --save
 ```
 
 ```bash
@@ -34,7 +38,7 @@ npm install web-form --save
 ```
 
 
-# How to use for development (Browser)
+## How to use for development (Browser)
 
 
 ```html
@@ -64,7 +68,7 @@ npm install web-form --save
 </body>
 ```
 
-# Options
+## Options
 
 To customize web-form desing you should check out [semantic-ui forms](http://semantic-ui.com/collections/form.html));
 
@@ -90,15 +94,51 @@ To customize web-form desing you should check out [semantic-ui forms](http://sem
          - type: Is a string that defines a type for the <input> tag ('text', 'password', etc)
          - api: (Not obligatory) Is a boolean. You should specified this value to true if you want to make request via ajax.
          
+
+## Create a bundle file
+
+a) execute
+
+```bash
+npm run build
+```
+b) add link script for bundle file 
+
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>web-form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.css">
+    
+</head>
+<body>
+
   
-# Examples
+  <web-form></web-form>
+  <!-- put link script  -->
+  <script type="text/javascript" src="dust/bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+  
+  <!-- mount web-form -->
+  <script type="text/javascript">
+    riot.mount('web-form', options);
+  </script>
+</body>
+```
+
+  
+## Examples
 
 You should please check out the examples online
 
-# Support
+## Support
 
 If you need help using web-form, or have found a bug, please create an issue on the Github repo
 
-# License
+## License
 
 [MIT License]()
