@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>web-form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.css">
+    <!-- Use semantic-ui grid-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/grid.min.css">
+    <style>
+        html {
+            font-size: 13px;
+            font-family: sans-serif;
+        }
+        .ui.form .field > label {
+            display: block;
+            margin: 0 0 .28571429rem;
+            color: rgba(20,20,20,.87);
+            font-size: .92857143em;
+            font-weight: 700;
+            text-transform: none;
+        }
+    </style>
+</head>
+<body>
+    <!--This containers are used with semantic-ui grid -->
+    <div class="ui centered grid">
+        <div class="six wide tablet eight wide computer column">
+            <web-form></web-form>
+        </div>
+    </div>
+    
+    <script src="../../src/web-form.tag" type="riot/tag"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.4.1/riot+compiler.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+    <script>
+        
+        const options = {};
+
+        options.checkbox = {
+            show: false,
+        };
+
+        options.button = {
+            class: '',
+            label: 'Submit'
+        };
+        
+        options.fetch = {
+           url: 'http://jsonplaceholder.typicode.com/users',
+           options: {
+               method: 'get'
+           }   
+        }
+
+        options.inputs = [{
+            class: 'fields',
+            block: [{
+                class: '',
+                label: 'Username:',
+                name: 'username',
+                placeholder: 'username',
+                type: 'text',
+                api:true
+            }, {
+                class: '',
+                label: 'Email:',
+                name: 'email',
+                placeholder: 'email',
+                type: 'text',
+                api:true
+            }, {
+                class: '',
+                label: 'Password:',
+                name: 'password',
+                placeholder: 'password',
+                type: 'password'
+            }]
+        }];
+
+        riot.mount('web-form', options);
+    </script>
+</body>
+</html>
