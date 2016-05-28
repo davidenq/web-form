@@ -1,0 +1,29 @@
+{
+  "name": "web-form",
+  "version": "0.0.1",
+  "description": "web-form is a web form as a riot-based webcomponent and semantic-ui css-based with some extra features.",
+  "main": "./src/main.js",
+  "authors": [{
+    "name": "David Núñez",
+    "email": "davip@live.com",
+    "url": "https://github.com/davidenq"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "riotjs",
+    "riot",
+    "webcomponents",
+    "html5",
+    "form",
+    "tags"
+  ],
+  "homepage": "https://github.com/davidenq/web-form",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

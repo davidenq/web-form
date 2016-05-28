@@ -1,6 +1,6 @@
 {
   "name": "web-form",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "web-form is a web form as a riot-based webcomponent and semantic-ui css-based with some extra features.",
   "scripts": {
     "test": "",
